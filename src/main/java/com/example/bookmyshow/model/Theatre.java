@@ -10,10 +10,8 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
-
 public class Theatre extends BaseModel{
     String name;
     String address;
-
     List<Hall> halls = new ArrayList<>();
 }

@@ -8,11 +8,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
-
 public class Seat extends BaseModel{
-
     private Integer rowNo;
     private Integer columnNo;
-
     private SeatType seatType;
 }

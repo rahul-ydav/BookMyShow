@@ -10,7 +10,7 @@ import java.util.ArrayList;
 @Builder
 @Getter
 @Setter
-public class Movie {
+public class Movie extends BaseModel{
     private String name;
     private Double rating;
     private String genre;

@@ -7,7 +7,6 @@ import lombok.Setter;
 
 import java.util.ArrayList;
 
-@Builder
 @Getter
 @Setter
 public class Ticket extends BaseModel{

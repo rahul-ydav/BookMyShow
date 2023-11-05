@@ -1,12 +1,15 @@
 package com.example.bookmyshow.model;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.*;
 
-@Builder
 @Setter
 @Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "bms_user")
 public class User extends BaseModel{
     private String name;
 }

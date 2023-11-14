@@ -2,14 +2,15 @@ package com.example.bookmyshow.model;
 
 import com.example.bookmyshow.enums.MovieFeature;
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder(toBuilder = true)
 @Getter
 @Setter
 @Entity
@@ -17,8 +18,8 @@ import java.util.List;
 public class Show extends BaseModel{
     @ManyToOne
     private Movie movie;
-    private Date start;
-    private Date end;
+    private Date start_date;
+    private Date end_date;
     @ManyToOne
     private Hall hall;
     @ElementCollection

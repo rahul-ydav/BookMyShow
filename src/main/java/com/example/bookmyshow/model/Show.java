@@ -17,6 +17,7 @@ import java.util.List;
 @Table(name = "bms_shows")
 public class Show extends BaseModel{
     @ManyToOne
+    @JoinColumn(name = "movie_id")
     private Movie movie;
     private Date start_date;
     private Date end_date;

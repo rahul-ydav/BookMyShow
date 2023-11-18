@@ -27,5 +27,6 @@ public class Show extends BaseModel{
     @Enumerated
     private ArrayList<MovieFeature> features;
     @OneToMany
+    @Builder.Default
     private List<ShowSeat> showSeats = new ArrayList<>();
 }

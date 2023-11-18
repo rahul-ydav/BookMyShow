@@ -1,4 +1,4 @@
-package com.example.bookmyshow.model;
+package com.example.bookmyshow.models;
 
 import com.example.bookmyshow.enums.Language;
 import jakarta.persistence.ElementCollection;

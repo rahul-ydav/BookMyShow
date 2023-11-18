@@ -1,4 +1,4 @@
-package com.example.bookmyshow.model;
+package com.example.bookmyshow.models;
 
 import com.example.bookmyshow.enums.MovieFeature;
 import jakarta.persistence.ElementCollection;

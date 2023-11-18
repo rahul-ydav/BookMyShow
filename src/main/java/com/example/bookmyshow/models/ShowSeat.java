@@ -1,8 +1,8 @@
-package com.example.bookmyshow.model;
+package com.example.bookmyshow.models;
 
 import com.example.bookmyshow.enums.SeatStatus;
 import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,21 +10,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
-
-@Getter
 @Setter
+@Getter
 @Entity
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Ticket extends BaseModel{
-    private Double amount;
+public class ShowSeat extends BaseModel{
     @ManyToOne
     private Show show;
-    @ManyToMany
-    private List<ShowSeat> seats;
     @ManyToOne
-    private User user;
+    private Seat seat;
+    @Enumerated
     private SeatStatus status;
 }

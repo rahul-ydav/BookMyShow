@@ -1,4 +1,4 @@
-package com.example.bookmyshow.model;
+package com.example.bookmyshow.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
@@ -7,6 +7,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,11 +15,15 @@ import java.util.List;
 @Setter
 @Entity
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class City extends BaseModel{
-    private String name;
+@NoArgsConstructor
+public class Theatre extends BaseModel{
+    String name;
+    String address;
     @OneToMany
     @Builder.Default
-    private List<Theatre> theatres = new ArrayList<>();
+    List<Hall> halls = new ArrayList<>();
+
+//    @OneToMany
+//    private List<Show> shows = new ArrayList<>();
 }

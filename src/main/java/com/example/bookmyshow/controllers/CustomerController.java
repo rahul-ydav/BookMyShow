@@ -1,5 +1,6 @@
 package com.example.bookmyshow.controllers;
 
+import com.example.bookmyshow.dto.CreateCustomerDTO;
 import com.example.bookmyshow.models.Customer;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,6 +1,8 @@
 package com.example.bookmyshow.models;
 
 import com.example.bookmyshow.enums.Language;
+import com.example.bookmyshow.enums.MovieFeature;
+
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;
@@ -24,9 +26,10 @@ public class Movie extends BaseModel{
     private String name;
     private Double rating;
     private String genre;
+    private List<MovieFeature> features;
     @ElementCollection
     @Enumerated
-    private ArrayList<Language> languages;
+    private List<Language> languages;
 
     @OneToMany(mappedBy = "movie")
     @Builder.Default

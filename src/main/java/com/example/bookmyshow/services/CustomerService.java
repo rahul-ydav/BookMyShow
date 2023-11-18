@@ -4,6 +4,7 @@ import com.example.bookmyshow.dto.CreateCustomerDTO;
 import com.example.bookmyshow.exceptions.CustomerNotFoundException;
 import com.example.bookmyshow.exceptions.EmailAlreadyExsistsException;
 import com.example.bookmyshow.models.Customer;
+import com.example.bookmyshow.models.User;
 import com.example.bookmyshow.repositories.CustomerRepository;
 
 import lombok.AllArgsConstructor;
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class CustomerService {
     private CustomerRepository customerRepository;
+    private UserService userService;
 
     public Customer getCustomer(Long id){
         return customerRepository.findById(id)
@@ -29,7 +31,17 @@ public class CustomerService {
         if (existingCustomer.isPresent()) {
             throw new EmailAlreadyExsistsException(email);
         }
-        
-        return null;
+
+        User user =  userService.createUser(request.getUsername(), request.getPassword());
+
+        Customer customer = Customer.builder()
+                .fullName(request.getFullName())
+                .city(request.getCity())
+                .phoneNumber(request.getPhoneNumber())
+                .email(request.getEmail())
+                .user(user)
+                .build();
+
+        return customerRepository.save(customer);
     }
 }

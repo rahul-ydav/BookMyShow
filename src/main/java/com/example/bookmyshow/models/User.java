@@ -11,5 +11,6 @@ import lombok.*;
 @Entity
 @Table(name = "bms_user")
 public class User extends BaseModel{
-    private String name;
+    private String username;
+    private String password;
 }

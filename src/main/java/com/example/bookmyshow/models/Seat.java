@@ -1,4 +1,4 @@
-package com.example.bookmyshow.model;
+package com.example.bookmyshow.models;
 
 import com.example.bookmyshow.enums.SeatType;
 import jakarta.persistence.Entity;
@@ -8,6 +8,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 
 @Getter
 @Setter

@@ -5,7 +5,9 @@ import org.springframework.stereotype.Repository;
 
 import com.example.bookmyshow.models.Movie;
 
+import java.util.Optional;
+
 @Repository
 public interface MovieRepository extends JpaRepository<Movie, Long>{
-    
+    public Optional<Movie> findByName(String name);
 } 

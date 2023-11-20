@@ -1,10 +1,6 @@
 package com.example.bookmyshow.controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.example.bookmyshow.dto.CreateMovieDTO;
 import com.example.bookmyshow.models.Movie;
@@ -19,9 +15,9 @@ public class MovieController {
 
     private MovieService movieService;
 
-    @GetMapping()
-    public Movie getMovie() {
-        return null;
+    @GetMapping("/{movie_id}")
+    public Movie getMovie(@PathVariable Long movie_id) {
+        return movieService.getMovie(movie_id);
     }
     
     @PostMapping

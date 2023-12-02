@@ -15,17 +15,21 @@ import java.util.List;
 @Setter
 @Entity
 @Table(name = "bms_shows")
-public class Show extends BaseModel{
+public class Show extends BaseModel {
+    
     @ManyToOne
     @JoinColumn(name = "movie_id")
     private Movie movie;
     private Date start_date;
     private Date end_date;
+    
     @ManyToOne
     private Hall hall;
+
     @ElementCollection
     @Enumerated
     private ArrayList<MovieFeature> features;
+
     @OneToMany
     @Builder.Default
     private List<ShowSeat> showSeats = new ArrayList<>();

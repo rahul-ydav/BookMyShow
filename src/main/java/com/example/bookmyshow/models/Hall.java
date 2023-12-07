@@ -5,9 +5,7 @@ import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.OneToMany;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,10 +14,12 @@ import java.util.List;
 @Setter
 @Entity
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Hall extends BaseModel {
 
     private String name;
-    @OneToMany
+    @OneToMany(mappedBy = "hall")
     @Builder.Default
     private List<Seat> seats = new ArrayList<>();
     @ElementCollection

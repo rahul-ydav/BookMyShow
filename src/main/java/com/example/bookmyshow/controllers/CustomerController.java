@@ -8,7 +8,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/v1/customer")
+@RequestMapping("/customer")
 @AllArgsConstructor
 public class CustomerController {
     private CustomerService customerService;

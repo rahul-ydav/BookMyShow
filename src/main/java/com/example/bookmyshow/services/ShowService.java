@@ -19,6 +19,10 @@ public class ShowService {
     private ShowSeatRepository showSeatRepository;
     private SeatService seatService;
 
+    public Show getShow(Long Id){
+        return showRepository.findById(Id).orElse(null);
+    }
+
 
     public Show createShow(CreateShowRequest request) {
         Hall hall = hallService.getHall(request.getHallid());

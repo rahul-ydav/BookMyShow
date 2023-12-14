@@ -8,12 +8,15 @@ import com.example.bookmyshow.models.User;
 import com.example.bookmyshow.repositories.CustomerRepository;
 
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
+@NoArgsConstructor
 public class CustomerService {
     private CustomerRepository customerRepository;
     private UserService userService;

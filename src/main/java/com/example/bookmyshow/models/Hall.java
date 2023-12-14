@@ -1,6 +1,8 @@
 package com.example.bookmyshow.models;
 
 import com.example.bookmyshow.enums.MovieFeature;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;
@@ -19,7 +21,7 @@ import java.util.List;
 public class Hall extends BaseModel {
 
     private String name;
-    @OneToMany(mappedBy = "hall")
+    @OneToMany(mappedBy = "hall", cascade = CascadeType.PERSIST)
     @Builder.Default
     private List<Seat> seats = new ArrayList<>();
     @ElementCollection

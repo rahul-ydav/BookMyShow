@@ -36,3 +36,7 @@ build/
 db/
 envs/*
 !envs/sample.env
+
+
+### My files ###
+src/main/resources/application.properties

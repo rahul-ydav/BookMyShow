@@ -5,6 +5,10 @@ import com.example.bookmyshow.enums.SeatStatus;
 import com.example.bookmyshow.models.*;
 import com.example.bookmyshow.repositories.BookingRepository;
 import com.example.bookmyshow.strategies.PricingStrategy;
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import org.springframework.stereotype.Service;
 
 import com.example.bookmyshow.dto.CreateBookingRequest;
@@ -15,6 +19,8 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 @Service
+@AllArgsConstructor
+@NoArgsConstructor
 public class BookingService {
 
     public CustomerService customerService;

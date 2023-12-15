@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.example.bookmyshow.enums.MovieFeature;
 import com.example.bookmyshow.models.Show;
 import com.example.bookmyshow.models.ShowSeat;
 
@@ -16,8 +17,7 @@ public class CreateShowRequest {
     private Date start_date;
     private Date end_date;
     private Long hallid;
-    private String[] features ;
-    private List<Integer> showSeatIds = new ArrayList<>();
+    private List<MovieFeature> features ;
     
     public Show createShow() {
         ArrayList<ShowSeat> showSeatLists = new ArrayList<>();

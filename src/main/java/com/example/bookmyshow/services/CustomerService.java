@@ -16,7 +16,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
-@NoArgsConstructor
 public class CustomerService {
     private CustomerRepository customerRepository;
     private UserService userService;

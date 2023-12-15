@@ -28,9 +28,10 @@ public class Show extends BaseModel {
 
     @ElementCollection
     @Enumerated
-    private ArrayList<MovieFeature> features;
+    @Builder.Default
+    private List<MovieFeature> features = new ArrayList<>();
 
-    @OneToMany
+    @OneToMany(mappedBy = "show")
     @Builder.Default
     private List<ShowSeat> showSeats = new ArrayList<>();
 }

@@ -9,10 +9,6 @@ public class SeatBasedPricingStrategy implements PricingStrategy{
 
     @Override
     public Double calculatePrice(Booking booking) {
-        //Iterate over showSeats
-        // ForEach showSeat get the price.
-        // Add all the prices.
-
         return booking.getSeats().stream().mapToDouble(
                 seat -> getPrice(seat.getSeat().getSeatType())
         ).sum();
